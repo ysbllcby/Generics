@@ -3,7 +3,7 @@ package com.linkedin.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Box<T> {
+public class Box<T extends Boxable>{
     private List<T> items;
 
     public Box() {
@@ -20,6 +20,12 @@ public class Box<T> {
 
     public List<T> getItems() {
         return items;
+    }
+
+    public double getTotalWeight() {
+        return this.items.stream()
+                .mapToDouble(Boxable::getWeight)
+                .sum();
     }
 
     @Override

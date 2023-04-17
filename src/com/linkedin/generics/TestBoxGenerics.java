@@ -8,6 +8,7 @@ public class TestBoxGenerics {
         System.out.println(bookBox.getLatestItem());
         System.out.println(bookBox);
         System.out.println(BoxUtils.getCountOfItems(bookBox));
+        System.out.println(bookBox.getTotalWeight());
 
         Box<Fruit> fruitBox = new Box<>();
         fruitBox.addItem(new Fruit("Mango", "Philippines", "Yellow", 1));
@@ -15,5 +16,6 @@ public class TestBoxGenerics {
         System.out.println(fruitBox.getLatestItem());
         System.out.println(fruitBox);
         System.out.println(BoxUtils.getCountOfItems(bookBox));
+        System.out.println(fruitBox.getTotalWeight());
     }
 }
