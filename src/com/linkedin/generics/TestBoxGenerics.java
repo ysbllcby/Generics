@@ -7,10 +7,13 @@ public class TestBoxGenerics {
         bookBox.addItem(new Book("Harry Potter 2", "JK Rowling", 1.6));
         System.out.println(bookBox.getLatestItem());
         System.out.println(bookBox);
+        System.out.println(BoxUtils.getCountOfItems(bookBox));
 
         Box<Fruit> fruitBox = new Box<>();
         fruitBox.addItem(new Fruit("Mango", "Philippines", "Yellow", 1));
+        fruitBox.addItem(new Fruit("Strawberry", "Philippines", "Red", 1));
         System.out.println(fruitBox.getLatestItem());
         System.out.println(fruitBox);
+        System.out.println(BoxUtils.getCountOfItems(bookBox));
     }
 }
