@@ -10,6 +10,14 @@ public class Box<T> {
         this.items = new ArrayList<>();
     }
 
+    public void addItem(T t) {
+        this.items.add(t);
+    }
+
+    public T getLatestItem() {
+        return this.items.get(items.size()-1);
+    }
+
     public List<T> getItems() {
         return items;
     }
