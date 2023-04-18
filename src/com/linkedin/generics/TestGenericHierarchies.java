@@ -10,5 +10,9 @@ public class TestGenericHierarchies {
         fruitBox = fruitCardboardBox;
 
         System.out.println(fruitBox.getTotalWeight());
+
+        // Type argument hierarchies
+        Box<Apple> appleBox = new Box<>();
+        // fruitBox = appleBox;
     }
 }
