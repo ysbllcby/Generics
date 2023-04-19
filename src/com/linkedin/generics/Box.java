@@ -33,6 +33,16 @@ public class Box<T extends Boxable>{
         box.addItem(t);
         return box;
     }
+
+    public static double getAverageWeightOfFruit(Box<? extends Fruit> box) {
+        return box.getTotalWeight() / box.getItems().stream()
+                .count();
+    }
+
+    public static void addAppleToBox(Box<? super Apple> box) {
+        box.addItem(new Apple("Fuji", "Japan", "Red", 1));
+    }
+
     @Override
     public String toString() {
         return "Box{" +
